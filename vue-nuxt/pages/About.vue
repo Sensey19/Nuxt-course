@@ -1,5 +1,11 @@
 <template>
     <div class="about">
+        <!-- Banner -->
+        <main-banner banner="/img/about-bg.jpg"
+                     title="About Me"
+                     subheading="This is what I do.">
+        </main-banner>
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">

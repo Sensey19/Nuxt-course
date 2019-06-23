@@ -24,12 +24,12 @@
                     </li>
 
 
-                    <!--<li v-if="!loginSuccess" class="nav-item">-->
-                        <!--<nuxt-link to="/login">Login</nuxt-link>-->
-                    <!--</li>-->
-                    <!--<li v-else class="nav-item">-->
-                        <!--<nuxt-link to="/profile">Profile</nuxt-link>-->
-                    <!--</li>-->
+                    <li v-if="!loginSuccess" class="nav-item">
+                        <nuxt-link to="/login">Login</nuxt-link>
+                    </li>
+                    <li v-else class="nav-item">
+                        <nuxt-link to="/profile">Profile</nuxt-link>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -42,11 +42,7 @@
             return {}
         },
         computed: {
-            // loginSuccess : function(){ return this.$store.getters.loginSuccess}
+            loginSuccess : function(){ return this.$store.getters.loginSuccess}
         },
     }
 </script>
-
-<style scoped>
-
-</style>

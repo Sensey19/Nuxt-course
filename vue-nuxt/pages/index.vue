@@ -1,11 +1,16 @@
 <template>
     <div>
+        <!-- Banner -->
+        <main-banner banner="/img/home-bg.jpg"
+                     title="Clean Blog"
+                     subheading="A Blog Theme by Start Bootstrap">
+        </main-banner>
+
         <div style="display: flex;" v-for="(post, index) in posts" :key="index">
             <h4>{{post.code}}</h4>
             <p>{{post.name}}</p>
             <p>{{post.description}}</p>
         </div>
-
 
         <div class="container">
             <div class="row">
@@ -99,7 +104,6 @@
             //     .catch(e => {
             //         console.error(e);
             //     });
-
         }
     }
 </script>

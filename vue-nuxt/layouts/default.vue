@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <!-- Page Header -->
-    <header-component></header-component>
+    <div>
+        <!-- Page Header -->
+        <header-component></header-component>
 
-    <!-- Page Banner -->
-    <main-banner></main-banner>
-
-    <nuxt/>
-    <!-- Footer -->
-    <footer-component></footer-component>
-  </div>
+        <nuxt/>
+        <!-- Footer -->
+        <footer-component></footer-component>
+    </div>
 </template>
 
 <script>
     export default {
+        created() {
+            const vm = this;
 
+            if (process.browser) {
+                const jwt = localStorage.token;
+                vm.$store.dispatch('jwtChecking', jwt);
+            }
+        }
     }
 </script>

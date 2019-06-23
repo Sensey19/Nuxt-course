@@ -1,5 +1,11 @@
 <template>
     <div class="contact">
+        <!-- Banner -->
+        <main-banner banner="/img/contact-bg.jpg"
+                     title="Contact Me"
+                     subheading="Have questions? I have answers.">
+        </main-banner>
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
