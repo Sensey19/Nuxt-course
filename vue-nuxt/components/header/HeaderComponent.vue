@@ -23,12 +23,15 @@
                         <nuxt-link to="/contact">Contact</nuxt-link>
                     </li>
 
-
                     <li v-if="!loginSuccess" class="nav-item">
                         <nuxt-link to="/login">Login</nuxt-link>
                     </li>
                     <li v-else class="nav-item">
                         <nuxt-link to="/profile">Profile</nuxt-link>
+                    </li>
+
+                    <li v-if="loginSuccess" class="nav-item">
+                        <nuxt-link to="/dashboard">Dashboard</nuxt-link>
                     </li>
                 </ul>
             </div>

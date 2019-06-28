@@ -1,7 +1,7 @@
 <template>
     <div class="login-success">
-        <h4 v-if="user !== null" class="login-success_title">Hello {{user.username}}!</h4>
-        <h4 v-else class="login-success_title">Hello waiting... !</h4>
+        <h4 v-if="user !== null" v-cloak class="login-success_title">Hello {{user.username}}!</h4>
+        <h4 v-else v-cloak class="login-success_title">waiting...</h4>
         <button @click="logOut" class="login-success_btn">Log out</button>
     </div>
 </template>
@@ -21,10 +21,7 @@
         },
         methods: {
             logOut() {
-                this.$store.dispatch('logout')
-                    .then(() => {
-                        this.$router.push('/login');
-                    })
+                return this.$store.dispatch('logout');
             }
         }
     }

@@ -59,7 +59,7 @@ const createStore = () => {
             logout({commit}) {
                 commit('logout');
                 localStorage.removeItem('token');
-                document.location.reload(true);
+                window.location.replace('/login');
             }
         },
         getters: {
